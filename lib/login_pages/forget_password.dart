@@ -8,6 +8,7 @@ import '../login_page_widgets/heading.dart';
 import '../login_page_widgets/google_sign_in.dart';
 import '../login_page_widgets/sliding_container.dart';
 import '../login_pages/sign_in_page.dart';
+import '../components/signup_background.dart';
 class ForgetPasswordPage extends StatefulWidget {
   const ForgetPasswordPage({Key? key}) : super(key: key);
 
@@ -80,7 +81,8 @@ class _ForgetPasswordState extends State<ForgetPasswordPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       body: SafeArea(
-        child: SingleChildScrollView(
+        child: Background(child: 
+        SingleChildScrollView(
           child: Container(
             margin: const EdgeInsets.all(0),
             height: MediaQuery.of(context).size.height,
@@ -186,7 +188,7 @@ class _ForgetPasswordState extends State<ForgetPasswordPage> {
           ),
         ),
       ),
-    );
+    ));
   }
 
   void Resetlink() async {
