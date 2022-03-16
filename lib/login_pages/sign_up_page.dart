@@ -194,7 +194,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            height: MediaQuery.of(context).size.height * 0.453,
+                            height: MediaQuery.of(context).size.height * 0.39,
                             width: double.infinity,
                             margin: const EdgeInsets.all(3),
                             child: Form(

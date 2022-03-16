@@ -1,4 +1,4 @@
-import 'package:circle_main/utils/google_authentication.dart';
+import 'package:FITKITAPP/utils/google_authentication.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

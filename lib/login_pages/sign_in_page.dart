@@ -1,4 +1,4 @@
-import 'package:circle_main/login_pages/sign_up_page.dart';
+import 'package:FITKITAPP/login_pages/sign_up_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'components/background.dart';
-import 'package:circle_main/components/rounded_button.dart';
-import 'package:circle_main/components/constants.dart';
+import 'package:FITKITAPP/components/rounded_button.dart';
+import 'package:FITKITAPP/components/constants.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:circle_main/login_pages/sign_in_page.dart';
-import 'package:circle_main/login_pages/sign_up_page.dart';
+import 'package:FITKITAPP/login_pages/sign_in_page.dart';
+import 'package:FITKITAPP/login_pages/sign_up_page.dart';
 import 'package:provider/provider.dart';
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({ Key ?key }) : super(key: key);

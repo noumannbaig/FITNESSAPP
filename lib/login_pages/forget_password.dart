@@ -81,8 +81,8 @@ class _ForgetPasswordState extends State<ForgetPasswordPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       body: SafeArea(
-        child: Background(child: 
-        SingleChildScrollView(
+        child: Background(
+          child: SingleChildScrollView(
           child: Container(
             margin: const EdgeInsets.all(0),
             height: MediaQuery.of(context).size.height,
@@ -116,7 +116,7 @@ class _ForgetPasswordState extends State<ForgetPasswordPage> {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
-                          color: Colors.blue,
+                          color: Colors.purple.shade700,
                         ),
                         padding: const EdgeInsets.all(10),
                         child: Column(

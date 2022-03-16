@@ -3,7 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'dart:async';
 import '../login_pages/main_page.dart';
 import 'arc_painter.dart';
-import 'package:circle_main/Welcome/welcome_screen.dart';
+import 'package:FITKITAPP/Welcome/welcome_screen.dart';
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();

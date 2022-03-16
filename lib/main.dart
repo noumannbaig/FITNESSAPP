@@ -1,5 +1,5 @@
 // import 'package:circle_main/login_pages/main_page.dart';
-import 'package:circle_main/splash_screen_widgets/splash_screen.dart';
+import 'package:FITKITAPP/splash_screen_widgets/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'notification/notification.dart';
