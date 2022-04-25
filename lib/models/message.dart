@@ -1,4 +1,4 @@
-import 'package:circle_main/utils/utils.dart';
+import 'package:FitKitApp2/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Message {

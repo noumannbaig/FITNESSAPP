@@ -1,4 +1,5 @@
-import 'package:circle_main/login_pages/sign_up_page.dart';
+import 'package:FitKitApp2/HomeScreen/home_page.dart';
+import 'package:FitKitApp2/login_pages/sign_up_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,8 @@ import '../login_page_widgets/sliding_container.dart';
 import 'forget_password.dart';
 import '../components/rounded_button.dart';
 import '../components/login_background.dart';
+import '../profile/profile_screen.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -25,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController passwordHandler = TextEditingController();
   final _form = GlobalKey<FormState>();
   final _auth = FirebaseAuth.instance;
-
+  final storage= new FlutterSecureStorage();
   // string for displaying the error Message
   String? errorMessage;
   void handleEmail() {}
@@ -70,6 +73,18 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
+      // appBar: AppBar(
+      // backgroundColor: Theme.of(context).backgroundColor,
+      //   elevation: 1,
+      //   leading: IconButton(
+      //     icon: Icon(
+      //       Icons.arrow_back,
+      //       color: Colors.purple,
+      //     ), 
+      //     onPressed: () {  
+      //         Navigator.pop(context);
+      //     },),
+      // ),
       body: SafeArea(
         child: Background(child: 
         SingleChildScrollView(
@@ -167,6 +182,7 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                                 onTap: () {
+                                
                                   Navigator.push(
                                     context,
                                     PageRouteBuilder(
@@ -211,6 +227,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
+                
                 Expanded(
                   child: SlidingContainer(
                     initialOffsetX: 1,
@@ -252,10 +269,15 @@ class _LoginPageState extends State<LoginPage> {
   void signIn(String email, String password) async {
     if (_form.currentState!.validate()) {
       try {
-        await _auth
-            .signInWithEmailAndPassword(email: email, password: password)
-            .then((uid) async {
-          await getUserData(uid);
+        UserCredential userCredential= await _auth         //if error remove usercredentil line and uncomment rest
+            .signInWithEmailAndPassword(email: email, password: password);
+          //   .then((uid) async {
+          // await getUserData(uid);
+          print(userCredential.user?.displayName);
+          await storage.write(key: "email", value:userCredential.user?.email);
+          await storage.write(key: "name", value:userCredential.user?.displayName);
+          await storage.write(key: "uid", value:userCredential.user?.uid);
+          
           Fluttertoast.showToast(msg: "Login Successful");
 
           Navigator.of(context).pushReplacement(
@@ -263,7 +285,7 @@ class _LoginPageState extends State<LoginPage> {
               pageBuilder: (context, animation, secondaryAnimation) {
                 return ListenableProvider(
                   create: (context) => animation,
-                  child: const SignUpPage(), //add Main Page screen to here
+                  child:   const MyHomePage(), //add Main Page screen to here
                 );
               },
               transitionDuration: const Duration(
@@ -271,7 +293,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           );
-        });
+        // });
       } on FirebaseAuthException catch (error) {
         switch (error.code) {
           case "invalid-email":

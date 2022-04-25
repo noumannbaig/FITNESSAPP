@@ -1,11 +1,14 @@
+import 'package:FitKitApp2/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'components/background.dart';
-import 'package:circle_main/components/rounded_button.dart';
-import 'package:circle_main/components/constants.dart';
+import 'package:FitKitApp2/components/rounded_button.dart';
+import 'package:FitKitApp2/components/constants.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:circle_main/login_pages/sign_in_page.dart';
-import 'package:circle_main/login_pages/sign_up_page.dart';
+import 'package:FitKitApp2/login_pages/sign_in_page.dart';
+import 'package:FitKitApp2/login_pages/sign_up_page.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({ Key ?key }) : super(key: key);
 
@@ -14,6 +17,7 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
+  
    @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,16 +30,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              "WELCOME TO FitKit",
+            const Text(
+              "FitKit",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 20,
+                fontSize: 50,
+                fontFamily: 'DancingScript',
               ),
             ),
             SizedBox(height: size.height * 0.05),
             SvgPicture.asset('assets/main.svg',
-            width: size.width*0.5,
+            width: size.width*0.7,
             ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(

@@ -29,14 +29,14 @@ class Heading extends StatelessWidget {
       ),
       child: Column(
         children: [
-          if (renderBackButton)
-            BackButtonCustom(
-              arrowBackgroundColor: arrowBackgroundColor,
-              arrowColor: Theme.of(context).backgroundColor,
-              tip: 'Back Button',
-              buttonHandler: backButtonPressed,
-              icon: Icons.arrow_back,
-            ),
+          // if (renderBackButton)
+          //   BackButtonCustom(
+          //     arrowBackgroundColor: arrowBackgroundColor,
+          //     arrowColor: Theme.of(context).backgroundColor,
+          //     tip: 'Back Button',
+          //     buttonHandler: backButtonPressed,
+          //     icon: Icons.arrow_back,
+          //   ),
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.04,
           ),

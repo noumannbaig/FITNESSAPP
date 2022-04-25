@@ -1,41 +1,41 @@
 {
   "project_info": {
-    "project_number": "854623149238",
-    "project_id": "circle-app-3aed6",
-    "storage_bucket": "circle-app-3aed6.appspot.com"
+    "project_number": "228332473596",
+    "project_id": "fitkitapp-d752b",
+    "storage_bucket": "fitkitapp-d752b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:854623149238:android:06d750afc7e97970c5da17",
+        "mobilesdk_app_id": "1:228332473596:android:92b4cbf1c49d913f6c1b79",
         "android_client_info": {
-          "package_name": "com.example.circle_main"
+          "package_name": "com.example.FitKitApp2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "854623149238-529gmutc90c2jeeq4qq130cu2o1geohl.apps.googleusercontent.com",
+          "client_id": "228332473596-7e7huhrejvdcoum52eogenldauqvaaa1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.circle_main",
-            "certificate_hash": "6e5f3c5d300175b0782b8d59d6da6f33a203d35a"
+            "package_name": "com.example.FitKitApp2",
+            "certificate_hash": "bb2c66824f74e8d090893f19837d90eddfd4bd7a"
           }
         },
         {
-          "client_id": "854623149238-97q7nof114t9hba9pf7r0g94q7cta50d.apps.googleusercontent.com",
+          "client_id": "228332473596-iiead69k7qa3svgkguog2oril0aema46.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC_o7lY_67yiyu-l1AedRfGsJJJfkT6kA0"
+          "current_key": "AIzaSyC2TjUhyJf9SfGDYVqgnLBoU67fo_MGxCU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "854623149238-97q7nof114t9hba9pf7r0g94q7cta50d.apps.googleusercontent.com",
+              "client_id": "228332473596-iiead69k7qa3svgkguog2oril0aema46.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -103,20 +103,20 @@ class _GoogleSignInButtonState extends State<GoogleSignInButton> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Image(
+                  children: const [
+                    Image(
                       image: AssetImage("assets/google_logo.png"),
                       height: 35.0,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text(
-                        'Sign in with Google',
-                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                              fontSize: 18,
-                            ),
-                      ),
-                    ),
+                    // Padding(
+                    //   padding: const EdgeInsets.only(left: 10),
+                    //   child: Text(
+                    //     'Sign in with Google',
+                    //     style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                    //           fontSize: 18,
+                    //         ),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

@@ -69,13 +69,13 @@ class _SignUpPageState extends State<SignUpPage> {
     if (isValid == null || !isValid) {
       return;
     }
+    // if (filledFormCounter == 0) {
+    //   basicWid = AgeGender(
+    //       selectedDate: selectedDate,
+    //       changeDate: changeDate,
+    //       changeGender: changeGender);
+    //   filledFormCounter++;}
     if (filledFormCounter == 0) {
-      basicWid = AgeGender(
-          selectedDate: selectedDate,
-          changeDate: changeDate,
-          changeGender: changeGender);
-      filledFormCounter++;
-    } else if (filledFormCounter == 1) {
       basicWid = PasswordFields(
         passwordHandler: passwordHandler,
         confirmPasswordHandler: confirmPasswordHandler,
@@ -85,7 +85,7 @@ class _SignUpPageState extends State<SignUpPage> {
         usernameHandler: usernameHandler,
       );
       filledFormCounter++;
-    } else if (filledFormCounter == 2) {
+    } else if (filledFormCounter == 1) {
       basicWid = PinWidget(
         verifEmail: emailHandler.text,
         myAuth: myAuth,
@@ -93,7 +93,7 @@ class _SignUpPageState extends State<SignUpPage> {
       );
 
       filledFormCounter++;
-    } else if (filledFormCounter == 3) {
+    } else if (filledFormCounter == 2) {
       var res =
           myAuth.validateOtp(recipientMail: emailHandler.text, userOtp: otpVal);
       if (!res) {
@@ -106,7 +106,7 @@ class _SignUpPageState extends State<SignUpPage> {
       basicWid = Container(
         alignment: Alignment.center,
         child: Text(
-          'Thank you for registering with us, Continue to login page!',
+          'Succesfully Registered',
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.headline4?.copyWith(
                 fontSize: 35,
@@ -117,7 +117,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
       filledFormCounter++;
       signUp(emailHandler.text, passwordHandler.text);
-    } else if (filledFormCounter == 4) {
+    } else if (filledFormCounter == 3) {
       Navigator.of(context).pop();
     } else {}
 
@@ -194,7 +194,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            height: MediaQuery.of(context).size.height * 0.453,
+                            height: MediaQuery.of(context).size.height * 0.39,
                             width: double.infinity,
                             margin: const EdgeInsets.all(3),
                             child: Form(

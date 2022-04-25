@@ -1,4 +1,4 @@
-package com.example.circle_main
+package com.example.FitKitApp2
 
 import io.flutter.embedding.android.FlutterActivity
 
