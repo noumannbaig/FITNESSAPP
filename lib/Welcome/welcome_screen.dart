@@ -6,6 +6,11 @@ import 'package:FitKitApp2/components/constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:FitKitApp2/login_pages/sign_in_page.dart';
 import 'package:FitKitApp2/login_pages/sign_up_page.dart';
+import 'package:FitKitApp2/components/rounded_button.dart';
+import 'package:FitKitApp2/components/constants.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:FitKitApp2/login_pages/sign_in_page.dart';
+import 'package:FitKitApp2/login_pages/sign_up_page.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 

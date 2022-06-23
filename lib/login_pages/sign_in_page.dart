@@ -1,4 +1,6 @@
-import 'package:FitKitApp2/HomeScreen/home_page.dart';
+// import 'package:FitKitApp2/HomeScreen/home_page.dart';
+import '../tabs/tabs.dart';
+import 'package:FitKitApp2/login_pages/sign_up_page.dart';
 import 'package:FitKitApp2/login_pages/sign_up_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -285,7 +287,7 @@ class _LoginPageState extends State<LoginPage> {
               pageBuilder: (context, animation, secondaryAnimation) {
                 return ListenableProvider(
                   create: (context) => animation,
-                  child:   const MyHomePage(), //add Main Page screen to here
+                  child:    Tabs(), //add Main Page screen to here
                 );
               },
               transitionDuration: const Duration(

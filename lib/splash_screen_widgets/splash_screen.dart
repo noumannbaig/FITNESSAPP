@@ -106,11 +106,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../Welcome/welcome_screen.dart';
+import '../login_pages/main_page.dart';
+import 'arc_painter.dart';
+import 'package:FitKitApp2/Welcome/welcome_screen.dart';
+class SplashScreen extends StatefulWidget {
 void main() {
   runApp(SplashScreen());
 }
 
-class SplashScreen extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() => StartState();
 }

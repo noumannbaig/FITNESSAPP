@@ -1,5 +1,6 @@
 // import 'package:circle_main/login_pages/main_page.dart';
 import 'package:FitKitApp2/splash_screen_widgets/splash_screen.dart';
+import 'package:FitKitApp2/splash_screen_widgets/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -8,8 +9,7 @@ import './theme/theme_control.dart';
 import './theme/theme.dart';
 import 'profile/profile_screen.dart';
 import './Welcome/welcome_screen.dart';
-import './HomeScreen/home_page.dart';
-import 'Videos/video.dart';
+import 'tabs/tabs.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -74,7 +74,7 @@ class _MyAppState extends State<MyApp> {
                       child: Center(child: CircularProgressIndicator(),),
                     );
                   }
-                   return  MyHomePage(); //add main page here
+                   return  Tabs(); //add main page here
                 } ,) ,//SplashScreen(),
               //home: ContactSuggestion(),
               // home: MainPage(),
